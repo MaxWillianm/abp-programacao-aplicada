@@ -8,11 +8,16 @@ class UsuariosController extends AppController
     
     public function index()
     {
+        //
+    }
+
+    public function admin_index()
+    {
         $usuarios = $this->Usuario->find('all');
         $this->set(compact('usuarios'));
     }
 
-    public function delete_user($id)
+    public function admin_delete($id)
     {
         if($this->Usuario->delete($id))
         {
@@ -25,7 +30,7 @@ class UsuariosController extends AppController
     }
 
 
-    public function create_user()
+    public function admin_add()
     {
         if(!empty($this->request->data))
         {
@@ -34,17 +39,19 @@ class UsuariosController extends AppController
             $this->Usuario->create();
             if($this->Usuario->save($form))
             {
-                $this->flash('Usuário cadastrado com sucesso!', '/usuarios', 'success');
+                $this->flash('Usuário cadastrado com sucesso!', '/admin/usuarios', 'success');
             }
             else
             {
-                $this->flash('Erro ao cadastrar usuário!', '/usuarios', 'error');
+                $this->flash('Erro ao cadastrar usuário!', '/admin/usuarios', 'error');
             }
         }
+
         $this->set('add', true);
+        $this->render('admin_edit');
     }
 
-    public function edit_user($id)
+    public function admin_edit($id)
     {
         if(!empty($this->request->data))
         {
@@ -53,11 +60,11 @@ class UsuariosController extends AppController
             $this->Usuario->id = $id;
             if($this->Usuario->save($form))
             {
-                $this->flash('Usuário editado com sucesso!', '/usuarios', 'success');
+                $this->flash('Usuário editado com sucesso!', '/admin/usuarios', 'success');
             }
             else
             {
-                $this->flash('Erro ao editar usuário!', '/usuarios', 'error');
+                $this->flash('Erro ao editar usuário!', '/admin/usuarios', 'error');
             }
         }
         else
@@ -65,7 +72,6 @@ class UsuariosController extends AppController
             $usuario = $this->Usuario->findById($id);
             $this->set('add', false);
             $this->request->data = $usuario;
-            $this->render('create_user');
         }
     }
 
@@ -89,7 +95,7 @@ class UsuariosController extends AppController
             if($usuarioLogado['email'] == $usuarios['Usuario']['email'] && $usuarioLogado['senha'] == $usuarios['Usuario']['senha'])
             {
                 $this->Session->write('UsuarioLogado', $usuarios['Usuario']);
-                $this->flash('Login efetuado com sucesso!', '/usuarios', 'success');
+                $this->flash('Login efetuado com sucesso!', '/produtos', 'success');
             }
             else
             {
