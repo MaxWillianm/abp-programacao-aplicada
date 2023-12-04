@@ -804,6 +804,13 @@ select {
 .z-50 {
   z-index: 50;
 }
+.m-2 {
+  margin: 0.5rem;
+}
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -815,10 +822,6 @@ select {
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
-}
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
 }
 .mb-1 {
   margin-bottom: 0.25rem;
@@ -852,6 +855,9 @@ select {
 }
 .mt-6 {
   margin-top: 1.5rem;
+}
+.mb-2 {
+  margin-bottom: 0.5rem;
 }
 .block {
   display: block;
@@ -914,6 +920,11 @@ select {
 .justify-between {
   justify-content: space-between;
 }
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
 .overflow-hidden {
   overflow: hidden;
 }
@@ -932,12 +943,12 @@ select {
 .border-2 {
   border-width: 2px;
 }
-.border-transparent {
-  border-color: transparent;
-}
 .border-black {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+.border-transparent {
+  border-color: transparent;
 }
 .bg-gray {
   --tw-bg-opacity: 1;
@@ -947,8 +958,47 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(62 163 212 / var(--tw-bg-opacity));
 }
+.bg-\[\#fc0f03\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 15 3 / var(--tw-bg-opacity));
+}
+.bg-\[\#1cfc03\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(28 252 3 / var(--tw-bg-opacity));
+}
+.bg-\[\#\#0314fc\] {
+  background-color: ##0314fc;
+}
+.bg-\[\#0314fc\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(3 20 252 / var(--tw-bg-opacity));
+}
+.bg-\[\#View\/Usuarios\/create_user\.ctp\] {
+  background-color: #View/Usuarios/create user.ctp;
+}
+.bg-\[1cfc03\] {
+  background-color: 1cfc03;
+}
+.bg-\[gray-100\] {
+  background-color: gray-100;
+}
+.bg-\[\#6c6e80\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(108 110 128 / var(--tw-bg-opacity));
+}
+.bg-\[\#9597a1\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(149 151 161 / var(--tw-bg-opacity));
+}
+.bg-\[\#dadbe3\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(218 219 227 / var(--tw-bg-opacity));
+}
 .p-1 {
   padding: 0.25rem;
+}
+.p-2 {
+  padding: 0.5rem;
 }
 .px-1 {
   padding-left: 0.25rem;
@@ -991,6 +1041,9 @@ select {
 .text-right {
   text-align: right;
 }
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -1005,6 +1058,18 @@ select {
 }
 .font-medium {
   font-weight: 500;
+}
+.font-black {
+  font-weight: 900;
+}
+.font-bold {
+  font-weight: 700;
+}
+.font-extrabold {
+  font-weight: 800;
+}
+.font-normal {
+  font-weight: 400;
 }
 .italic {
   font-style: italic;

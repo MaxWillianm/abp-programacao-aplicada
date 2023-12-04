@@ -16,10 +16,10 @@ class DATABASE_CONFIG
   public $default = array(
     'datasource' => 'Database/Mysql',
     'persistent' => false,
-    'host' => 'host.docker.internal', // em uso de docker 'host.docker.internal'; no XAMPP/Laragon 'localhost'
+    'host' => 'localhost', // em uso de docker 'host.docker.internal'; no XAMPP/Laragon 'localhost'
     'login' => 'root',
-    'password' => '123456',
-    'database' => 'abp-prog-aplicada', // não se esqueça de definir uma dabatase própria para este novo projeto
+    'password' => '',
+    'database' => 'abp_pa', // não se esqueça de definir uma dabatase própria para este novo projeto
     'encoding' => 'UTF8',
   );
 
