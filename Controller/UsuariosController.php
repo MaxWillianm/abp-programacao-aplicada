@@ -69,5 +69,45 @@ class UsuariosController extends AppController
         }
     }
 
+    public function login()
+    {
+
+        if(!empty($this->request->data))
+        {
+            $usuarioLogado = $this->request->data['UsuarioLogado'];
+
+            $usuarios = $this->Usuario->find('first', array(
+                'conditions' => array('Usuario.email' => $usuarioLogado['email']
+            )));
+
+            if(empty($usuarios))
+            {
+                $this->flash('Nenhum usuario encontrado!', '/usuarios/login', 'success');
+                return;
+            }
+
+            if($usuarioLogado['email'] == $usuarios['Usuario']['email'] && $usuarioLogado['senha'] == $usuarios['Usuario']['senha'])
+            {
+                $this->Session->write('UsuarioLogado', $usuarios['Usuario']);
+                $this->flash('Login efetuado com sucesso!', '/usuarios', 'success');
+            }
+            else
+            {
+                $this->flash('Usuário ou senha incorretos!', '/usuarios/login', 'success');
+            }
+            
+            $this->set(compact('usuarios'));
+        }
+
+
+
+    }
+
+    public function logout()
+    {
+        $this->Session->destroy();
+        $this->flash('Logout efetuado com sucesso!', '/usuarios/login', 'success');
+    }
+
 }
 ?>
