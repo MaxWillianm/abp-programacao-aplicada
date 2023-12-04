@@ -16,7 +16,7 @@
     "build": "npm run prod",
     "upd": "yarn upgrade-interactive --latest"
   },
-  "author": "Burn web.studio - http://www.burnweb.com.br/",
+  "author": "Unisatc",
   "dependencies": {
     "jquery": "^3.7.0",
     "jquery-mask-plugin": "^1.14.16",

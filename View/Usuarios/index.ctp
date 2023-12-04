@@ -1,6 +1,6 @@
 <div>
     <?php foreach($usuarios as $usuario) { ?>
-        <div class="border border-black my-8">
+        <div class="border container border-black my-8">
             <p>Nome: <?php echo $usuario['Usuario']['nome'] ?></p>
             <p>Email: <?php echo $usuario['Usuario']['email'] ?></p>
             <p>Celular: <?php echo $usuario['Usuario']['celular'] ?></p>
