@@ -3,6 +3,7 @@ Router::connect('/', array('controller' => 'home', 'action' => 'index'));
 Router::connect('/page/*', array('controller' => 'pages', 'action' => 'index'));
 Router::connect('/noticia/*', array('controller' => 'noticias', 'action' => 'view'));
 Router::connect('/fale-conosco', array('controller' => 'contato', 'action' => 'index'));
+Router::connect('/produtos/adicionar_carrinho/*', array('controller' => 'produtos', 'action' => 'add_carrinho'));
 
 /* ADMIN ROUTE */
 Router::connect(
