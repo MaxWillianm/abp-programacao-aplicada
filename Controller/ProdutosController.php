@@ -118,5 +118,13 @@ class ProdutosController extends AppController
         $this->flash('Produto adicionado ao carrinho!', '/produtos/carrinho', 'success');
     }
 
+    public function finalizar()
+    {
+        $this->Session->delete('carrinho');
+        $this->Session->delete('saldoTotal');
+
+        $this->flash('Compra finalizada com sucesso!', '/produtos/index', 'success');
+    }
+
 }
 ?>
