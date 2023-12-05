@@ -64,16 +64,27 @@ Objetos
 Nosso trabalho consta apenas duas classes para objetos, portanto seriam os usuários e os produtos. A quantidade deles aí varia de acordo com a aplicação.
 
 Objeto usuário: Cada usuário irá conter:
+
 •	id para identificá-lo no banco de dados com autoincremento
+
 •	nome que seria o nome de cada usuário varchar (100)
+
 •	email para guardar o email do usuário varchar(50)
+
 •	senha campo para guardar a senha do varchar(50)
+
 •	nascimento data de nascimento do usuário date(15)
+
 •	sexo identificar o sexo do usuário varchar(10)
 
 Objeto produto: Cada produto irá conter:
+
 •	id para identificação dentro do banco de dados autoincremento
+
 •	nome para descrever o nome do produto em especifico e filtra-lo varchar(100)
+
 •	valor campo destinado para cada produto inserir seu preço FLOAT
+
 •	descrição do produto mais detalhada varchar(200)
+
 
