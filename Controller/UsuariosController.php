@@ -21,11 +21,11 @@ class UsuariosController extends AppController
     {
         if($this->Usuario->delete($id))
         {
-            $this->flash('Usuário deletado com sucesso!', '/usuarios', 'success');
+            $this->flash('Usuário deletado com sucesso!', '/admin/usuarios', 'success');
         }
         else
         {
-            $this->flash('Erro ao deletar usuário!', '/usuarios', 'error');
+            $this->flash('Erro ao deletar usuário!', '/admin/usuarios', 'error');
         }   
     }
 

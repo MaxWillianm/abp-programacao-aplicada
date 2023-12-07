@@ -11,5 +11,6 @@
         <button type="submit" class="w-full bg-blue-500 text-black shadow-2xl bg-success font-semibold py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300">Entrar</button>
         <?php echo $this->xForm->end() ?>
         <p class="mt-4 text-center">Não tem uma conta? <a href="<?php echo $this->Html->url('/usuarios/cadastrar') ?>" class="text-blue-500 hover:text-green hover:underline transition duration-300">Cadastre-se</a></p>
+        <a href="<?php echo $this->Html->url('/password_reset') ?>" class="mt-4 text-center text-blue-500 hover:text-green hover:underline transition duration-300">Esqueci minha senha</a>
     </div>
 </div>
