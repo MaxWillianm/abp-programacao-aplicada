@@ -1,5 +1,6 @@
 # abp-programacao-aplicada
 Repositório da ABP de Programação Aplicada
+
 ### colaboradores
 - Bruno Rosso
 - Felipe Saturno
@@ -13,6 +14,7 @@ Diagrama de classes
 
 Classe produtos: ProdutoController 
 Métodos:
+
 *Método para mostrar todos os produtos existentes no banco 
 Public function index() {
 }
@@ -21,34 +23,59 @@ Public function index() {
 Public function view_produto($id) {
 }
 
-*Método para deletar um produto dentro do banco e por consequência em tela
-Public function delete_produto($id) {
+*Método para mostrar para o usuario administrador todos os produtos
+Public function admin_index() {
 }
 
 *Método para criar um produto no banco para ser exibido em tela
 Public function create_produto() {
 }
 
-*Método para editar um produto no banco para ser exibido em tela
-Public function edit_produto($id) {
+*Método para deletar produto especifico passado por parametro
+Public function admin_delete($id) {
+}
+
+*Método para acidionar produto na lista de produtos
+Public function admin_add() {
+}
+
+*Método para editar produto na lista de produtos
+Public function admin_edit($id) {
+}
+
+*Método para capturar o valor da sessão e mostrar para o usuario
+Public function carrinho() {
+}
+
+*Método para adiconar o produto selecionado ao carrinho
+Public function add_carrinho() {
+}
+
+*Método para finalizar a sessão apos a comprar e voltar pagina de produtos
+Public function finalizar() {
 }
 
 Classe Usuários: UsuariosController 
 Métodos:
+
 *Método para mostrar todos os usuários existentes no banco
 Public function index() {
 }
 
-*Método para deletar um usuário dentro do banco pelo id e por consequência em tela
-Public function delete_user($id) { 
+*Método para mostrar todos os usuarios cadastradis para o usuario administrador
+Public function admin_index() { 
 }
 
-*Método para criar um usuário no banco para ser exibido em tela
-Public function create_user() {
+*Método utilizado pelo usuario administrador para deletar um usuário passado por parametro 
+Public function admin_delete(%id) {
 }
 
-*Método para editar um usuário no banco pelo seu id para ser exibido em tela
-Public function edit_user($id) {
+*Método  utilizado pelo usuario administrador para adicionar um usuário no banco 
+Public function admin_add() {
+}
+
+*Método  utilizado pelo usuario administrador para editar um usuário no banco 
+Public function admin_edit(%id) {
 }
 
 *Método para pegar o que o usuário digitou e verifica se existe no banco e faz login 
