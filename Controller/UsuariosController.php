@@ -75,6 +75,40 @@ class UsuariosController extends AppController
         }
     }
 
+    public function cadastrar()
+    {
+        if(!empty($this->request->data))
+        {
+            if($this->request->data['Usuario']['senha'] != $this->request->data['Usuario']['confirm_senha'])
+            {
+                $this->flash('As senhas não coincidem!', '/usuarios/cadastrar', 'success');
+                return;
+            }
+
+            $email = $this->Usuario->find('first', array(
+                'conditions' => array('Usuario.email' => $this->request->data['Usuario']['email']
+            )));
+
+            if(!empty($email))
+            {
+                $this->flash('Email já cadastrado!', '/usuarios/cadastrar', 'success');
+                return;
+            }
+
+            $form = $this->request->data;
+            
+            $this->Usuario->create();
+            if($this->Usuario->save($form))
+            {
+                $this->flash('Usuário cadastrado com sucesso!', '/usuarios/login', 'success');
+            }
+            else
+            {
+                $this->flash('Erro ao cadastrar usuário!', '/usuarios/cadastrar', 'success');
+            }
+        }
+    }
+
     public function login()
     {
 

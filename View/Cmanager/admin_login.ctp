@@ -1,5 +1,5 @@
 <h1 id="logo">
-  <img style="max-width: 270px; margin: 0 auto; display: block;" src="<?php echo $this->request->webroot . "img/admin/logo.png"; ?>" alt="<?php echo $conf['name']; ?>" />
+  <!-- <img style="max-width: 270px; margin: 0 auto; display: block;" src="<?php echo $this->request->webroot . "img/admin/logo.png"; ?>" alt="<?php echo $conf['name']; ?>" /> -->
 </h1>
 
 <?php echo $this->xForm->create('AdminUser', array("url" => "/admin/cmanager/login", "id" => "formLogin")); ?>

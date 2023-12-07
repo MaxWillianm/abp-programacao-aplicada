@@ -5,8 +5,8 @@
       
     <?php foreach($carrinho as $car) { ?>
     <div class="flex justify-between border-b border-gray-300 p-4">
-        <h2 class="text-lg font-semibold">Nome do Produto</h2>
-        <span class="text-gray-700 font-semibold">R$ 99,99</span>
+        <h2 class="text-lg font-semibold"><?php echo $car['Produto']['nome'] ?></h2>
+        <span class="text-gray-700 font-semibold">R$ <?php echo $car['Produto']['valor'] ?></span>
     </div>
     <?php } ?>
       

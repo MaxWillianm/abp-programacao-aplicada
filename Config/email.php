@@ -56,6 +56,6 @@ class EmailConfig
 		'log' => false,
 		'charset' => 'utf-8',
 		'headerCharset' => 'utf-8',
-	);
+	);	
 
 }

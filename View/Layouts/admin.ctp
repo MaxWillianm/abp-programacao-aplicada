@@ -85,9 +85,10 @@ $action = strtolower($this->request->action);
 									<li><a href="<?php echo $this->Html->url('/admin/noticias'); ?>">Notícias</a></li>
 								</ul>
 							</li>
-							<?php if($this->Session->read('Auth.AdminUser.type') === 'A'): ?>
+							<!-- <?php if($this->Session->read('Auth.AdminUser.type') === 'A'): ?>
 							<li><a href="<?php echo $this->Html->url("/admin/cmanager/users"); ?>"><span class="glyphicon glyphicon-user"></span> Usuários</a></li>
-							<?php endif; ?>
+							<?php endif; ?> -->
+							<li><a href="<?php echo $this->Html->url("/admin/produtos"); ?>"><span class=""></span> Produtos</a></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 							<li class="dropdown">
