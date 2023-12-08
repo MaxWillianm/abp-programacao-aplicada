@@ -3,9 +3,9 @@ Repositório da ABP de Programação Aplicada
 
 ### colaboradores
 - Bruno Rosso
-- Felipe Saturno
+- Felipe Saturno da Silva
 - Max Willian Trajano
-- Vitor W
+- Vitor Koch Wessler
 
 
 ## Diagrama de classes
@@ -60,7 +60,7 @@ Métodos:
 Public function index() {
 }
 
-- Método para mostrar todos os usuarios cadastradis para o usuario administrador  
+- Método para mostrar todos os usuarios cadastrados para o usuario administrador  
 Public function admin_index() { 
 }
 
@@ -87,7 +87,7 @@ Public function logout() {
 
 ### Classe PasswordReset: PasswordResetController
 
-- Método que recebe um email e envia um link de redefinição de senha  
+- Método que recebe um email digitado no campo e envia um link de redefinição de senha para o mesmo
 Public function index()
 
 - Método que abre o link enviado pelo método anterior, e verifica se é válido e permite o usuário redefinir a senha  
@@ -121,4 +121,13 @@ Objetos
 
 - descrição do produto mais detalhada varchar(200)  
 
+### Objeto PasswordReset: Cada objeto irá conter:
+
+- id para identificação dentro do banco de dados autoincremento  
+
+- user_id recebe o id do usuario para identificar á quem pertence o objeto  
+
+- recover_key recebe o código gerado pelo sistema para gerar um link unico para ser enviado ao usuário  
+
+- expiration_date recebe a data de expiração da recover_key, onde será usada para validação do link  
 
