@@ -7,6 +7,8 @@ Repositório da ABP de Programação Aplicada
 - Max Willian Trajano
 - Vitor Koch Wessler
 
+- instruções para analisar: dentro da pasta Controller contem os arquivos das classes. Dentro da pasta Model possui as classes para o acesso ao banco.
+
 
 ## Diagrama de classes
 
